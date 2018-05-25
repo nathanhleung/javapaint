@@ -8,9 +8,9 @@ import java.awt.Color;
 import java.awt.Point;
 
 public abstract class Tool {
-	Canvas canvas;
-	Point initialMousePosition;
-	Color currentColor;
+	private Canvas canvas;
+	private Point initialMousePosition;
+	private Color currentColor;
 	
 	public Tool(Canvas canvas, Point initialMousePosition, Color currentColor) {
 		this.canvas = canvas;
@@ -19,4 +19,16 @@ public abstract class Tool {
 	}
 	
 	public abstract void draw(Point finalMousePosition);
+	
+	public Canvas getCanvas() {
+		return this.canvas;
+	}
+	
+	public Point getInitialMousePosition() {
+		return this.initialMousePosition;
+	}
+	
+	public Color getCurrentColor() {
+		return this.currentColor;
+	}
 }
